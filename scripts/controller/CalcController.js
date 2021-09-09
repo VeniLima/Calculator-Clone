@@ -282,16 +282,23 @@ class CalcController {
 
             let secondItem = this._operation[2];
 
-            console.log(operator);
+            if (operator == '*') {
+                result = firstItem * secondItem;
+
+                result = result / 100;
+                this._operation = [result];
+            }else{
             
             result = firstItem * secondItem;
 
             result = result / 100;
 
             //result = parseFloat(firstItem) + parseFloat(result);
+            console.log(result)
             result = eval(parseFloat(firstItem) + operator + parseFloat(result));
 
             this._operation = [result];
+        }
         
         } else {
 
