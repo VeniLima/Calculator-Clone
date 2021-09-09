@@ -275,7 +275,7 @@ class CalcController {
 
         if (last == '%') {
 
-            console.log('aqui')
+
             let firstItem = this._operation[0];
 
             let operator = this._operation[1];
@@ -293,8 +293,6 @@ class CalcController {
 
             result = result / 100;
 
-            //result = parseFloat(firstItem) + parseFloat(result);
-            console.log(result)
             result = eval(parseFloat(firstItem) + operator + parseFloat(result));
 
             this._operation = [result];
